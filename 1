@@ -1,0 +1,42 @@
+using namespace std;
+
+#include <iostream> 
+
+int main() 
+{
+
+	int M, i, j, c;
+
+	cout << "M="; cin >> M;
+	
+	int** A = new int* [M];
+	for (i = 0; i < M; i++) {
+		A[i] = new int[M];
+		for (j = 0; j < M; j++) {
+			cin >> A[i][j];
+		}
+	}
+	cout << endl;
+
+	for (c = 0; c < (M / 2 + 1); c++) {
+		for (i = c; i < M - c; i++) {
+			cout << A[i][c] << "\t";
+		}
+		i--;
+		for (j = c + 1; j < M - c; j++) {
+			cout << A[i][j] << "\t";
+		}
+		j--;
+	     for (i = M - c - 2; i >= c; i--)
+		{
+			cout << A[i][j] << "\t";
+		}
+		i++;
+		for (j = M - c - 2; j > c; j--)
+		{
+			cout << A[i][j] << "\t";
+		}
+		j++;
+	}
+	return 0;
+}
