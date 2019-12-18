@@ -8,14 +8,19 @@ int main()
 
 	cout << "M="; cin >> M;
 	cout << "N="; cin >> N;
+	int C[M][N];
+
+for (i = 0; i < M; i++)
+{
+for (j = 0; j < N; j++)
+{
+cin >> C[i][j];
+}
+cout << endl;
+}
 	s = M * N;
 	int* A = new int[s];
 	int* B = new int[N];
-	for (z = 1; z <= s; z++) 
-	{
-		cin >> A[z];
-	}
-	
 	w = 0; p = 1; m = 999999;
 	for (i = 1; i <= N; i++) {
 		for (z = i; z <= s; z += N) {
