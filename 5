@@ -9,14 +9,19 @@ int main()
 	
 	cout << "M="; cin >> M;
 	cout << "N="; cin >> N;
+	int C[M][N];
+
+for (i = 0; i < M; i++)
+{
+for (j = 0; j < N; j++)
+{
+cin >> C[i][j];
+}
+cout << endl;
+}
 	s = M * N;
 	int* A = new int[s];
 	double* B = new double[N];
-	
-	for (j = 1; j <= s; j++) 
-	{
-		cin >> A[j];
-	}
 	x = 0; w = 0;
 	for (i = 1; i <= N; i++) 
 	{
