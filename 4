@@ -8,6 +8,16 @@ int main()
 	double w;
 	cout << "M="; cin >> M;
 	cout << "N="; cin >> N;
+	int C[M][N];
+
+for (i = 0; i < M; i++)
+{
+for (j = 0; j < N; j++)
+{
+cin >> C[i][j];
+}
+cout << endl;
+}
 	s = M * N;
 	double* A = new double[s];
 	double* B = new double[N];
