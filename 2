@@ -8,16 +8,16 @@ int main()
 	int N, M, i, j, K, s, p;
 	cout << "M="; cin >> M;
 	cout << "N="; cin >> N;
-	int** A = new int* [M];
+	int A[M][N];
 
-	for (i = 1; i < M + 1; i++) 
-	{
-		A[i] = new int[N];
-		for (j = 1; j < N + 1; j++) 
-		{
-			cin >> A[i][j];
-		}
-	}
+for (i = 0; i < M; i++)
+{
+for (j = 0; j < N; j++)
+{
+cin >> A[i][j];
+}
+cout << endl;
+}
 	cout << "K="; cin >> K;
 	s = 0; p = 1;
 	for (i = 1; i < M + 1; i++) {
