@@ -22,14 +22,14 @@ cout << endl;
 	int* A = new int[s];
 	int* B = new int[N];
 	w = 0; p = 1; m = 999999;
-	for (i = 1; i <= N; i++) {
+	for (i = 0; i < N; i++) {
 		for (z = i; z <= s; z += N) {
 			p*= A[z];
 		}
 		B[i] = p;
 		p = 1;
 	}
-	for (i = 1; i <= N; i++) {
+	for (i = 0; i < N; i++) {
 		if (B[i] < m) {
 			m = B[i];
 			w = i;
